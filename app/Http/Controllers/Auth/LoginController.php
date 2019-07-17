@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Hekmatinasser\Verta\Verta;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -26,6 +27,13 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+    public function redirectTo()
+    {
+        auth()->user()->last_login = auth()->user()->login;
+        auth()->user()->login = Verta::now();
+        auth()->user()->save();
+        return Route('home');
+    }
 
     /**
      * Create a new controller instance.
@@ -36,4 +44,10 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function username()
+    {
+        return 'username';
+    }
+
 }
