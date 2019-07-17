@@ -29,30 +29,6 @@
             url('{{ ('fonts/IranNastaliq.ttf') }}') format('truetype'),
             url('{{ ('fonts/IranNastaliq.woff') }}') format('woff');
         }
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
         .title {
             font-size: 50px;
         }
@@ -76,7 +52,7 @@
     <div id="app" style="font-family:'Bmitra;'">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="font-family: 'IranNastaliq'">
+                <a class="navbar-brand" href="{{ Route('welcome') }}" style="font-family: 'IranNastaliq'">
                     <img src="{{ asset('image/SBU.png') }}">
                     {{ config('app.name') }}
                 </a>
@@ -103,15 +79,14 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                    <a class="dropdown-item text-center" href="{{ route('home') }}">
                                         پنل ادمین
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('password') }}">
+                                    <a class="dropdown-item text-center" href="{{ route('password') }}">
                                         تغییر رمز عبور
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item text-center" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();" style="color:red;">
                                         خروج
