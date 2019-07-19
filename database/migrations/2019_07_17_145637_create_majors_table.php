@@ -15,6 +15,14 @@ class CreateMajorsTable extends Migration
     {
         Schema::create('majors', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('supervisor')->nullable();
+            $table->integer('4_m')->nullable();
+            $table->integer('4_e')->nullable();
+            $table->integer('5_m')->nullable();
+            $table->integer('5_e')->nullable();
+            $table->integer('j_m')->nullable();
+            $table->integer('j_e')->nullable();
             $table->timestamps();
         });
     }
