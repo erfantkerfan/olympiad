@@ -10,24 +10,26 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('/js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css">
 
     <!-- Styles -->
-    <link href="{{ ('css/app.css') }}" rel="stylesheet">
+    <link href="{{ ('/css/app.css') }}" rel="stylesheet">
     <style>
         @font-face {
             font-family:'Bmitra';
-            src: url('{{ ('fonts/BTITRBOLD.ttf') }}');
+            src: url('{{ ('/fonts/BTITRBOLD.ttf') }}');
         }
         @font-face {
             font-family: 'IranNastaliq';
-            src: url('{{ ('fonts/IranNastaliq.eot?#') }}') format('eot'),
-            url('{{ ('fonts/IranNastaliq.ttf') }}') format('truetype'),
-            url('{{ ('fonts/IranNastaliq.woff') }}') format('woff');
+            src: url('{{ ('/fonts/IranNastaliq.eot?#') }}') format('eot'),
+            url('{{ ('/fonts/IranNastaliq.ttf') }}') format('truetype'),
+            url('{{ ('/fonts/IranNastaliq.woff') }}') format('woff');
         }
         .title {
             font-size: 50px;
