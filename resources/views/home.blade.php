@@ -8,7 +8,29 @@
                 <div class="card-header text-center">پنل ادمین</div>
 
                 <div class="card-body text-right">
-                    You are logged in!
+                    <a href="/">
+                        <button class="btn">
+                            اضافه کردن متقاضی
+                        </button>
+                        <button class="btn">
+                            پذیرش متقاضی
+                        </button>
+                        <button class="btn">
+                            تغییر دادن اطلاعات متقاضی
+                        </button>
+                        <button class="btn">
+                            دانشگاه ها
+                        </button>
+                        <button class="btn">
+                            رشته ها
+                        </button>
+                        <button class="btn">
+                            خوابگاها
+                        </button>
+                        <button class="btn">
+                            آمار غذاخوری
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
