@@ -43,7 +43,7 @@
                                 <label for="fa_name" class="col-md-4 col-form-label text-md-right">نام پدر</label>
 
                                 <div class="col-md-7">
-                                    <input id="fa_name" type="text" class="form-control{{ $errors->has('fa_name') ? ' is-invalid' : '' }}" name="fa_name" value="{{ $applicant->fa_name }}" required autofocus>
+                                    <input id="fa_name" type="text" class="form-control{{ $errors->has('fa_name') ? ' is-invalid' : '' }}" name="fa_name" value="{{ $applicant->fa_name }}" autofocus>
 
                                     @if ($errors->has('fa_name'))
                                         <span class="invalid-feedback" role="alert">
@@ -86,10 +86,32 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="type" class="col-md-4 col-form-label text-md-right">نوع متقاضی</label>
+
+                                <div class="col-md-7">
+                                    <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" autofocus>
+                                        <option value="">انتخاب کنید</option>
+
+                                        <option value="1" @if($applicant->type==1) selected @endif>داوطلب</option>
+                                        <option value="2" @if($applicant->type==2) selected @endif>سرپرست داوطلب</option>
+                                        <option value="3" @if($applicant->type==3) selected @endif>همراه داوطلب</option>
+                                        <option value="4" @if($applicant->type==4) selected @endif>عوامل خدماتی</option>
+                                        <option value="5" @if($applicant->type==5) selected @endif>عوامل برگزاری</option>
+                                    </select>
+
+                                    @if ($errors->has('type'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="district" class="col-md-4 col-form-label text-md-right">متمرکز/غیرمتمرکز</label>
 
                                 <div class="col-md-7">
-                                    <select id="district" class="form-control{{ $errors->has('district') ? ' is-invalid' : '' }}" name="district" required autofocus>
+                                    <select id="district" class="form-control{{ $errors->has('district') ? ' is-invalid' : '' }}" name="district" autofocus>
                                         <option value="1" @if($applicant->district==1) selected @endif>ارشد-سراسري</option>
                                         <option value="2" @if($applicant->district==2) selected @endif>غيرمتمركز</option>
                                     </select>
@@ -106,7 +128,7 @@
                                 <label for="university" class="col-md-4 col-form-label text-md-right">دانشگاه</label>
 
                                 <div class="col-md-7">
-                                    <select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" required autofocus>
+                                    <select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" autofocus>
                                         @foreach($universities as $university)
                                             <option value="{{$university->id}}" @if($applicant->university==$university->id) selected @endif>{{$university->name}}</option>
                                         @endforeach
@@ -124,7 +146,7 @@
                                 <label for="major" class="col-md-4 col-form-label text-md-right">رشته المپیاد</label>
 
                                 <div class="col-md-7">
-                                    <select id="major" class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}" name="major" required autofocus>
+                                    <select id="major" class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}" name="major" autofocus>
                                         @foreach($majors as $major)
                                             <option value="{{$major->id}}" @if($applicant->major==$major->id) selected @endif>{{$major->name}}</option>
                                         @endforeach
@@ -185,25 +207,6 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="state" class="col-md-4 col-form-label text-md-right">وضعیت پذیرش</label>
-
-                                <div class="col-md-7">
-                                    <select id="state" class="form-control{{ $errors->has('state') ? ' is-invalid' : '' }}" name="state" autofocus>
-                                        <option value="">انتخاب کنید</option>
-                                        <option value="1" @if($applicant->state==1) selected @endif>پذیرش کامل</option>
-                                        <option value="2" @if($applicant->state==2) selected @endif>پذیرش موقت</option>
-                                        <option value="3" @if($applicant->state==3) selected @endif>پذیرش ممکن نیست</option>
-                                    </select>
-
-                                    @if ($errors->has('state'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('state') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
                                 <label for="state_note" class="col-md-4 col-form-label text-md-right">بادداشت وضعیت</label>
 
                                 <div class="col-md-7">
@@ -212,28 +215,6 @@
                                     @if ($errors->has('state_note'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('state_note') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="type" class="col-md-4 col-form-label text-md-right">نوع متقاضی</label>
-
-                                <div class="col-md-7">
-                                    <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" autofocus>
-                                        <option value="">انتخاب کنید</option>
-
-                                        <option value="1" @if($applicant->type==1) selected @endif>داوطلب</option>
-                                        <option value="2" @if($applicant->type==2) selected @endif>سرپرست داوطلب</option>
-                                        <option value="3" @if($applicant->type==3) selected @endif>همراه داوطلب</option>
-                                        <option value="4" @if($applicant->type==4) selected @endif>عوامل خدماتی</option>
-                                        <option value="5" @if($applicant->type==5) selected @endif>عوامل برگزاری</option>
-                                    </select>
-
-                                    @if ($errors->has('type'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('type') }}</strong>
                                     </span>
                                     @endif
                                 </div>
@@ -370,6 +351,28 @@
                                 </div>
                             </div>
 
+                            <div class="text-center">
+                                ------------------------------------------
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="state" class="col-md-4 col-form-label text-md-right">وضعیت پذیرش</label>
+
+                                <div class="col-md-7">
+                                    <select id="state" class="form-control{{ $errors->has('state') ? ' is-invalid' : '' }}" name="state" autofocus>
+                                        <option value="">انتخاب کنید</option>
+                                        <option value="1" @if($applicant->state==1) selected @endif>پذیرش کامل</option>
+                                        <option value="2" @if($applicant->state==2) selected @endif>پذیرش موقت</option>
+                                        <option value="3" @if($applicant->state==3) selected @endif>پذیرش ممکن نیست</option>
+                                    </select>
+
+                                    @if ($errors->has('state'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('state') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8">

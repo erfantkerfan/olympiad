@@ -43,7 +43,7 @@
                                 <label for="fa_name" class="col-md-4 col-form-label text-md-right">نام پدر</label>
 
                                 <div class="col-md-7">
-                                    <input id="fa_name" type="text" class="form-control{{ $errors->has('fa_name') ? ' is-invalid' : '' }}" name="fa_name" value="{{ old('fa_name') }}" required autofocus>
+                                    <input id="fa_name" type="text" class="form-control{{ $errors->has('fa_name') ? ' is-invalid' : '' }}" name="fa_name" value="{{ old('fa_name') }}" autofocus>
 
                                     @if ($errors->has('fa_name'))
                                         <span class="invalid-feedback" role="alert">
@@ -87,10 +87,32 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="type" class="col-md-4 col-form-label text-md-right">نوع متقاضی</label>
+
+                                <div class="col-md-7">
+                                    <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" autofocus>
+                                        <option value="">انتخاب کنید</option>
+
+                                        <option value="1">داوطلب</option>
+                                        <option value="2">سرپرست داوطلب</option>
+                                        <option value="3">همراه داوطلب</option>
+                                        <option value="4">عوامل خدماتی</option>
+                                        <option value="5">عوامل برگزاری</option>
+                                    </select>
+
+                                    @if ($errors->has('type'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label for="district" class="col-md-4 col-form-label text-md-right">متمرکز/غیرمتمرکز</label>
 
                                 <div class="col-md-7">
-                                    <select id="district" class="form-control{{ $errors->has('district') ? ' is-invalid' : '' }}" name="district" required autofocus>
+                                    <select id="district" class="form-control{{ $errors->has('district') ? ' is-invalid' : '' }}" name="district" autofocus>
                                         <option value="">اتخاب کنید</option>
                                         <option value="1">ارشد-سراسري</option>
                                         <option value="2">غيرمتمركز</option>
@@ -108,7 +130,7 @@
                                 <label for="university" class="col-md-4 col-form-label text-md-right">دانشگاه</label>
 
                                 <div class="col-md-7">
-                                    <select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" required autofocus>
+                                    <select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" autofocus>
                                         <option value="">اتخاب کنید</option>
                                         @foreach($universities as $university)
                                             <option value="{{$university->id}}">{{$university->name}}</option>
@@ -127,7 +149,7 @@
                                 <label for="major" class="col-md-4 col-form-label text-md-right">رشته المپیاد</label>
 
                                 <div class="col-md-7">
-                                    <select id="major" class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}" name="major" required autofocus>
+                                    <select id="major" class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}" name="major" autofocus>
                                         <option value="">اتخاب کنید</option>
                                         @foreach($majors as $major)
                                             <option value="{{$major->id}}">{{$major->name}}</option>

@@ -19,8 +19,8 @@ class ApplicantController extends Controller
 
     public function form()
     {
-        $universities = University::all();
-        $majors = Major::all();
+        $universities = University::orderBy('name')->get();
+        $majors = Major::orderBy('name')->get();
         return view('applicant.form')->with(compact('universities','majors'));
     }
 
@@ -28,12 +28,18 @@ class ApplicantController extends Controller
     {
         $applicant = new Applicant($request->all());
         $applicant -> save();
-        return $applicant;
+        return redirect()->route('applicant_list');
     }
 
-    public function list()
+    public function list(Request $request)
     {
-        $applicants = Applicant::with('university','major')->get();
+        if (!isset($request->sort)){
+            $request->sort='id';
+        }
+        if (!isset($request->order)){
+            $request->order='asc';
+        }
+        $applicants = Applicant::with('university','major')->orderBy($request->sort,$request->order)->get();
         return view('applicant.list')->with(compact('applicants'));
     }
 
@@ -57,9 +63,9 @@ class ApplicantController extends Controller
             'خوابگاه پنج شنبه'=>'d_5',
             'خوابگاه جمعه'=>'d_j',
         ];
-        $universities = University::all();
-        $majors = Major::all();
-        $dorms = Dorm::all();
+        $universities = University::orderBy('name')->get();
+        $majors = Major::orderBy('name')->get();
+        $dorms = Dorm::orderBy('name')->get();
         $applicant = Applicant::FindOrFail($id);
         return view('applicant.show')->with(compact('applicant','universities','majors','dorms','food_array','dorm_array'));
     }
@@ -96,8 +102,10 @@ class ApplicantController extends Controller
             foreach ($dorm_array as $key=>$value){
                 $applicant -> $value = $university->$value;
             }
+            $applicant -> dorm = $university->dorm;
+            $applicant -> d_room = $university->d_room;
         }
         $applicant->save();
-        return $applicant;
+        return redirect()->route('applicant_list');
     }
 }

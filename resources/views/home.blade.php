@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header text-center">پنل ادمین</div>
 
-                <div class="card-body text-right">
+                <div class="card-body text-center">
                     <a href="{{Route('applicant_create')}}">
                         <button class="btn">
                             اضافه کردن متقاضی
@@ -20,30 +20,30 @@
                     </a>
                     <br>
                     <br>
-                    <a href="{{Route('home')}}">
+                    <a href="{{Route('university_list')}}">
                         <button class="btn">
                             دانشگاه ها
                         </button>
                     </a>
                     <br>
                     <br>
-                    <a href="{{Route('home')}}">
+                    <a href="{{Route('major_list')}}">
                         <button class="btn">
-                            رشته ها
+                            رشته های المپیادی
                         </button>
                     </a>
                     <br>
                     <br>
-                    <a href="{{Route('home')}}">
+                    <a href="{{Route('dorm_list')}}">
                         <button class="btn">
-                            خوابگاها
+                            خوابگاه ها
                         </button>
                     </a>
                     <br>
                     <br>
                     <a href="{{Route('cafe')}}">
                         <button class="btn">
-                            آمار غذاخوری
+                            آمار غذاخوری و خوابگاه ها
                         </button>
                     </a>
                 </div>
