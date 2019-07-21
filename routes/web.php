@@ -45,6 +45,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dorm/delete/{id}', 'DormController@delete')->name('dorm_delete');
 
     Route::get('/pdf/{id}', 'ExtraController@pdf')->name('pdf');
-    Route::get('/cafe', 'ExtraController@cafe')->name('cafe');
+    Route::prefix('report')->group(function () {
+        Route::get('/cafe', 'ReportController@cafe')->name('cafe');
+        Route::get('/state', 'ReportController@state')->name('state_report');
+        Route::get('/major', 'ReportController@major')->name('major_report');
+        Route::get('/university', 'ReportController@university')->name('university_report');
+    });
     Route::get('/test', 'ExtraController@test');
 });

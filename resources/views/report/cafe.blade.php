@@ -122,9 +122,7 @@
                                     @foreach($food_array as $key=>$value)
                                         <td scope="col">
                                             @if($applicant->$value===1)
-                                                {{--<h2>--}}
-                                                    <span class="fas fa-apple-alt" style="color: red"></span>
-                                                {{--</h2>--}}
+                                                <span class="fas fa-apple-alt" style="color: red"></span>
                                             @elseif(true)
                                                 <span class="fas fa-sad-tear"></span>
                                             @endif
@@ -133,15 +131,13 @@
                                     @foreach($dorm_array as $key=>$value)
                                         <td @if($loop->first) scope="col" style="border-right: 2px solid black;" @endif>
                                             @if($applicant->$value===1)
-                                                {{--<h2>--}}
-                                                    <span class="fas fa-hotel" style="color: red"></span>
-                                                {{--</h2>--}}
+                                                <span class="fas fa-hotel" style="color: red"></span>
                                             @elseif(true)
                                                 <span class="fas fa-sad-tear"></span>
                                             @endif
                                         </td>
                                     @endforeach
-                                    <td>{{ $applicant->getRelation('dorm')->name }}</td>
+                                    <td>{{ $applicant->getRelation('dorm')->name ?? ""}}</td>
                                     <td>{{ $applicant->d_room }}</td>
                                 </tr>
                             @endforeach

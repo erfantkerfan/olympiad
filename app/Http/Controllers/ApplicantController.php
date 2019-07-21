@@ -46,8 +46,6 @@ class ApplicantController extends Controller
     public function show($id)
     {
         $food_array = [
-            'شام سه شنبه'=>'3_d',
-            'صبحانه چهارشنبه'=>'4_b',
             'ناهار چهارشنبه'=>'4_l',
             'شام چهارشنبه'=>'4_d',
             'صبحانه پنج شنبه'=>'5_b',
@@ -56,6 +54,7 @@ class ApplicantController extends Controller
             'صبحانه جمعه'=>'j_b',
             'ناهار جمعه'=>'j_l',
             'شام جمعه'=>'j_d',
+            'صبحانه شنبه'=>'s_b',
         ];
         $dorm_array = [
             'خوابگاه سه شنبه'=>'d_3',
@@ -73,8 +72,6 @@ class ApplicantController extends Controller
     public function edit($id,Request $request)
     {
         $food_array = [
-            'شام سه شنبه'=>'3_d',
-            'صبحانه چهارشنبه'=>'4_b',
             'ناهار چهارشنبه'=>'4_l',
             'شام چهارشنبه'=>'4_d',
             'صبحانه پنج شنبه'=>'5_b',
@@ -83,6 +80,7 @@ class ApplicantController extends Controller
             'صبحانه جمعه'=>'j_b',
             'ناهار جمعه'=>'j_l',
             'شام جمعه'=>'j_d',
+            'صبحانه شنبه'=>'s_b',
         ];
         $dorm_array = [
             'خوابگاه سه شنبه'=>'d_3',

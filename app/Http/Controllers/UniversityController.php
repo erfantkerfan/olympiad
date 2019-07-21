@@ -17,8 +17,6 @@ class UniversityController extends Controller
     public function list(Request $request)
     {
         $food_array = [
-            'شام سه شنبه'=>'3_d',
-            'صبحانه چهارشنبه'=>'4_b',
             'ناهار چهارشنبه'=>'4_l',
             'شام چهارشنبه'=>'4_d',
             'صبحانه پنج شنبه'=>'5_b',
@@ -27,6 +25,7 @@ class UniversityController extends Controller
             'صبحانه جمعه'=>'j_b',
             'ناهار جمعه'=>'j_l',
             'شام جمعه'=>'j_d',
+            'صبحانه شنبه'=>'s_b',
         ];
         $dorm_array = [
             'خوابگاه سه شنبه'=>'d_3',

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center" dir="rtl">
-        <div class="col-md-4">
+        <div class="col-md-7">
             <div class="card">
                 <div class="card-header text-center">پنل ادمین</div>
 
@@ -43,7 +43,22 @@
                     <br>
                     <a href="{{Route('cafe')}}">
                         <button class="btn">
-                            آمار غذاخوری و خوابگاه ها
+                            گزارش غذاخوری و خوابگاه ها
+                        </button>
+                    </a>
+                    <a href="{{Route('state_report')}}">
+                        <button class="btn">
+                            گزارش وضعیت ها
+                        </button>
+                    </a>
+                    <a href="{{Route('major_report')}}">
+                        <button class="btn">
+                            گزارش رشته ها
+                        </button>
+                    </a>
+                    <a href="{{Route('university_report')}}">
+                        <button class="btn">
+                            گزارش دانشگاه ها
                         </button>
                     </a>
                 </div>

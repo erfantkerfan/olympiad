@@ -29,10 +29,36 @@
                                     <tr class="text-center">
                                         <td scope="row"><textarea form="config_form" style="width: 300px" class="form-control" name="name" id="name"></textarea></td>
                                         @foreach($food_array as $key=>$value)
-                                            <td scope="row"><input form="config_form" class="form-control text-center" name="{{$value}}" id="{{$value}}" value=""></td>
+                                            <td scope="row">
+                                                <div class="form-check-inline">
+                                                    <input form="config_form" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1">
+                                                    <label class="form-check-label" for="{{$value}}">
+                                                        بله
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input form="config_form" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0">
+                                                    <label class="form-check-label" for="{{$value}}">
+                                                        خبر
+                                                    </label>
+                                                </div>
+                                            </td>
                                         @endforeach
                                         @foreach($dorm_array as $key=>$value)
-                                            <td scope="row"><input form="config_form" class="form-control text-center" name="{{$value}}" id="{{$value}}" value=""></td>
+                                            <td scope="row">
+                                                <div class="form-check-inline">
+                                                    <input form="config_form" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1">
+                                                    <label class="form-check-label" for="{{$value}}">
+                                                        بله
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input form="config_form" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0">
+                                                    <label class="form-check-label" for="{{$value}}">
+                                                        خبر
+                                                    </label>
+                                                </div>
+                                            </td>
                                         @endforeach
                                         <td scope="row"><button form="config_form" type="submit" class="btn btn-sm">ثبت</button></td>
                                     </tr>
@@ -91,10 +117,36 @@
                                             <td scope="row">{{ $loop->iteration }}</td>
                                             <td scope="row"><textarea form="config_form{{$loop->iteration}}" style="width: 300px" class="form-control" name="name" id="name">{{$university->name}}</textarea></td>
                                             @foreach($food_array as $key=>$value)
-                                                <td scope="row"><input form="config_form{{$loop->parent->iteration}}" class="form-control text-center" name="{{$value}}" id="{{$value}}" value="{{$university->$value}}"></td>
+                                                <td scope="row">
+                                                    <div class="form-check-inline">
+                                                        <input form="config_form{{$loop->parent->iteration}}" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1" @if($university->$value==1) checked @endif>
+                                                        <label class="form-check-label" for="{{$value}}">
+                                                            بله
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check-inline">
+                                                        <input form="config_form{{$loop->parent->iteration}}" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0" @if($university->$value===0) checked @endif>
+                                                        <label class="form-check-label" for="{{$value}}">
+                                                            خبر
+                                                        </label>
+                                                    </div>
+                                                </td>
                                             @endforeach
                                             @foreach($dorm_array as $key=>$value)
-                                                <td scope="row"><input form="config_form{{$loop->parent->iteration}}" class="form-control text-center" name="{{$value}}" id="{{$value}}" value="{{$university->$value}}"></td>
+                                                <td scope="row">
+                                                    <div class="form-check-inline">
+                                                        <input form="config_form{{$loop->parent->iteration}}" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1" @if($university->$value==1) checked @endif>
+                                                        <label class="form-check-label" for="{{$value}}">
+                                                            بله
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check-inline">
+                                                        <input form="config_form{{$loop->parent->iteration}}" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0" @if($university->$value===0) checked @endif>
+                                                        <label class="form-check-label" for="{{$value}}">
+                                                            خبر
+                                                        </label>
+                                                    </div>
+                                                </td>
                                             @endforeach
                                             <td scope="row"><button form="config_form{{$loop->iteration}}" type="submit" class="btn btn-sm">اعمال</button></td>
                                         </tr>

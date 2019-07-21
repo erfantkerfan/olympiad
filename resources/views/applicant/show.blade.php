@@ -70,12 +70,26 @@
                             <div class="form-group row">
                                 <label for="gender" class="col-md-4 col-form-label text-md-right">جنسیت</label>
 
-                                <div class="col-md-7">
-                                    <select id="gender" class="form-control{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" required autofocus>
-                                        <option value="1" @if($applicant->gender==1) selected @endif>زن</option>
-                                        <option value="2" @if($applicant->gender==2) selected @endif>مرد</option>
-                                        <option value="3" @if($applicant->gender==3) selected @endif>سایر</option>
-                                    </select>
+                                <div class="col-md-7 text-right">
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="2" @if($applicant->gender==2) checked @endif>
+                                        <label class="form-check-label" for="gender">
+                                            مرد
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="1" @if($applicant->gender==1) checked @endif>
+                                        <label class="form-check-label" for="gender">
+                                            زن
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="3" @if($applicant->gender==3) checked @endif>
+                                        <label class="form-check-label" for="gender">
+                                            سایر
+                                        </label>
+                                    </div>
 
                                     @if ($errors->has('gender'))
                                         <span class="invalid-feedback" role="alert">
@@ -95,8 +109,9 @@
                                         <option value="1" @if($applicant->type==1) selected @endif>داوطلب</option>
                                         <option value="2" @if($applicant->type==2) selected @endif>سرپرست داوطلب</option>
                                         <option value="3" @if($applicant->type==3) selected @endif>همراه داوطلب</option>
-                                        <option value="4" @if($applicant->type==4) selected @endif>عوامل خدماتی</option>
-                                        <option value="5" @if($applicant->type==5) selected @endif>عوامل برگزاری</option>
+                                        <option value="4" @if($applicant->type==4) selected @endif>عوامل دانشگاه</option>
+                                        <option value="5" @if($applicant->type==5) selected @endif>عوامل سنجش</option>
+                                        <option value="6" @if($applicant->type==5) selected @endif>اساتید و ناظرین</option>
                                     </select>
 
                                     @if ($errors->has('type'))
@@ -110,11 +125,20 @@
                             <div class="form-group row">
                                 <label for="district" class="col-md-4 col-form-label text-md-right">متمرکز/غیرمتمرکز</label>
 
-                                <div class="col-md-7">
-                                    <select id="district" class="form-control{{ $errors->has('district') ? ' is-invalid' : '' }}" name="district" autofocus>
-                                        <option value="1" @if($applicant->district==1) selected @endif>ارشد-سراسري</option>
-                                        <option value="2" @if($applicant->district==2) selected @endif>غيرمتمركز</option>
-                                    </select>
+                                <div class="col-md-7 text-right">
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="district" id="district" value="1" @if($applicant->district==1) checked @endif>
+                                        <label class="form-check-label" for="district">
+                                            ارشد-سراسري
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="district" id="district" value="2" @if($applicant->district==2) checked @endif>
+                                        <label class="form-check-label" for="district">
+                                            غيرمتمركز
+                                        </label>
+                                    </div>
 
                                     @if ($errors->has('district'))
                                         <span class="invalid-feedback" role="alert">
@@ -129,6 +153,7 @@
 
                                 <div class="col-md-7">
                                     <select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" autofocus>
+                                        <option value="">انتخاب کنید</option>
                                         @foreach($universities as $university)
                                             <option value="{{$university->id}}" @if($applicant->university==$university->id) selected @endif>{{$university->name}}</option>
                                         @endforeach
@@ -147,6 +172,7 @@
 
                                 <div class="col-md-7">
                                     <select id="major" class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}" name="major" autofocus>
+                                        <option value="">انتخاب کنید</option>
                                         @foreach($majors as $major)
                                             <option value="{{$major->id}}" @if($applicant->major==$major->id) selected @endif>{{$major->name}}</option>
                                         @endforeach
@@ -191,12 +217,20 @@
                             <div class="form-group row">
                                 <label for="card" class="col-md-4 col-form-label text-md-right">کارت سنجش دریافت کرده</label>
 
-                                <div class="col-md-7">
-                                    <select id="gender" class="form-control{{ $errors->has('card') ? ' is-invalid' : '' }}" name="card" autofocus>
-                                        <option value="">انتخاب کنید</option>
-                                        <option value="0" @if($applicant->gender===0) selected @endif>خیر</option>
-                                        <option value="1" @if($applicant->gender==1) selected @endif>بله</option>
-                                    </select>
+                                <div class="col-md-7 text-right">
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="card" id="card" value="1" @if($applicant->gender==1) checked @endif>
+                                        <label class="form-check-label" for="card">
+                                            بله
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="card" id="card" value="0" @if($applicant->gender===0) checked @endif>
+                                        <label class="form-check-label" for="card">
+                                            خبر
+                                        </label>
+                                    </div>
 
                                     @if ($errors->has('card'))
                                         <span class="invalid-feedback" role="alert">
@@ -223,12 +257,20 @@
                             <div class="form-group row">
                                 <label for="team" class="col-md-4 col-form-label text-md-right">مراجعه دسته جمعی</label>
 
-                                <div class="col-md-7">
-                                    <select id="team" class="form-control{{ $errors->has('team') ? ' is-invalid' : '' }}" name="team" autofocus>
-                                        <option value="">انتخاب کنید</option>
-                                        <option value="0" @if($applicant->team===0) selected @endif>خیر</option>
-                                        <option value="1" @if($applicant->team==1) selected @endif>بله</option>
-                                    </select>
+                                <div class="col-md-7 text-right">
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="team" id="team" value="1" @if($applicant->gender==1) checked @endif>
+                                        <label class="form-check-label" for="team">
+                                            بله
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="team" id="team" value="0" @if($applicant->gender===0) checked @endif>
+                                        <label class="form-check-label" for="team">
+                                            خبر
+                                        </label>
+                                    </div>
 
                                     @if ($errors->has('team'))
                                         <span class="invalid-feedback" role="alert">
@@ -246,12 +288,20 @@
                                 <div class="form-group row">
                                     <label for="{{$value}}" class="col-md-4 col-form-label text-md-right">{{$key}}</label>
 
-                                    <div class="col-md-7">
-                                        <select id="{{$value}}" class="form-control{{ $errors->has($value) ? ' is-invalid' : '' }}" name="{{$value}}" autofocus>
-                                            <option value="">انتخاب کنید</option>
-                                            <option value="0" @if($applicant->$value===0) selected @endif>خیر</option>
-                                            <option value="1" @if($applicant->$value==1) selected @endif>بله</option>
-                                        </select>
+                                    <div class="col-md-7 text-right">
+
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1" @if($applicant->$value==1) checked @endif>
+                                            <label class="form-check-label" for="{{$value}}">
+                                                بله
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0" @if($applicant->$value===0) checked @endif>
+                                            <label class="form-check-label" for="{{$value}}">
+                                                خیر
+                                            </label>
+                                        </div>
 
                                         @if ($errors->has($value))
                                             <span class="invalid-feedback" role="alert">
@@ -289,12 +339,20 @@
                                 <div class="form-group row">
                                     <label for="{{$value}}" class="col-md-4 col-form-label text-md-right">{{$key}}</label>
 
-                                    <div class="col-md-7">
-                                        <select id="{{$value}}" class="form-control{{ $errors->has($value) ? ' is-invalid' : '' }}" name="{{$value}}" autofocus>
-                                            <option value="">انتخاب کنید</option>
-                                            <option value="0" @if($applicant->$value===0) selected @endif>خیر</option>
-                                            <option value="1" @if($applicant->$value==1) selected @endif>بله</option>
-                                        </select>
+                                    <div class="col-md-7 text-right">
+
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1" @if($applicant->$value==1) checked @endif>
+                                            <label class="form-check-label" for="{{$value}}">
+                                                بله
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0" @if($applicant->$value===0) checked @endif>
+                                            <label class="form-check-label" for="{{$value}}">
+                                                خیر
+                                            </label>
+                                        </div>
 
                                         @if ($errors->has($value))
                                             <span class="invalid-feedback" role="alert">
@@ -356,15 +414,28 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="state" class="col-md-4 col-form-label text-md-right">وضعیت پذیرش</label>
+                                <label for="state" class="col-md-3 col-form-label text-md-right">وضعیت پذیرش</label>
 
-                                <div class="col-md-7">
-                                    <select id="state" class="form-control{{ $errors->has('state') ? ' is-invalid' : '' }}" name="state" autofocus>
-                                        <option value="">انتخاب کنید</option>
-                                        <option value="1" @if($applicant->state==1) selected @endif>پذیرش کامل</option>
-                                        <option value="2" @if($applicant->state==2) selected @endif>پذیرش موقت</option>
-                                        <option value="3" @if($applicant->state==3) selected @endif>پذیرش ممکن نیست</option>
-                                    </select>
+                                <div class="col-md-9 text-right">
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="state" id="state" value="1" @if($applicant->state==1) checked @endif>
+                                        <label class="form-check-label" for="state">
+                                            پذیرش کامل
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="state" id="state" value="2" @if($applicant->state==2) checked @endif>
+                                        <label class="form-check-label" for="state">
+                                            پذیرش موقت
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="state" id="state" value="3" @if($applicant->state==3) checked @endif>
+                                        <label class="form-check-label" for="state">
+                                            پذیرش ممکن نیست
+                                        </label>
+                                    </div>
 
                                     @if ($errors->has('state'))
                                         <span class="invalid-feedback" role="alert">
@@ -374,13 +445,19 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row mb-0">
-                                <div class="col-md-8">
-                                    <button type="submit" class="btn btn-primary">
-                                        پذیرش
-                                    </button>
-                                </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary mx-auto">
+                                    پذیرش
+                                </button>
+                                @if($applicant->state==1 or $applicant->state==2)
+                                    <a href="{{Route('pdf',['id'=>$applicant->id])}}">
+                                        <button class="btn btn-success mx-auto">
+                                            دریافت کارت پذیرش
+                                        </button>
+                                    </a>
+                                @endif
                             </div>
+
                         </form>
                     </div>
                 </div>

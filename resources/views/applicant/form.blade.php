@@ -70,13 +70,26 @@
                             <div class="form-group row">
                                 <label for="gender" class="col-md-4 col-form-label text-md-right">جنسیت</label>
 
-                                <div class="col-md-7">
-                                    <select id="gender" class="form-control{{ $errors->has('gender') ? ' is-invalid' : '' }}" name="gender" required autofocus>
-                                        <option value="">اتخاب کنید</option>
-                                        <option value="1">زن</option>
-                                        <option value="2">مرد</option>
-                                        <option value="3">سایر</option>
-                                    </select>
+                                <div class="col-md-7 text-right">
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="2">
+                                        <label class="form-check-label" for="gender">
+                                            مرد
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="1">
+                                        <label class="form-check-label" for="gender">
+                                            زن
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="3">
+                                        <label class="form-check-label" for="gender">
+                                            سایر
+                                        </label>
+                                    </div>
 
                                     @if ($errors->has('gender'))
                                         <span class="invalid-feedback" role="alert">
@@ -96,8 +109,9 @@
                                         <option value="1">داوطلب</option>
                                         <option value="2">سرپرست داوطلب</option>
                                         <option value="3">همراه داوطلب</option>
-                                        <option value="4">عوامل خدماتی</option>
-                                        <option value="5">عوامل برگزاری</option>
+                                        <option value="4">عوامل دانشگاه</option>
+                                        <option value="5">عوامل عوامل سنجش</option>
+                                        <option value="6">اساتید و ناظرین</option>
                                     </select>
 
                                     @if ($errors->has('type'))
@@ -111,12 +125,20 @@
                             <div class="form-group row">
                                 <label for="district" class="col-md-4 col-form-label text-md-right">متمرکز/غیرمتمرکز</label>
 
-                                <div class="col-md-7">
-                                    <select id="district" class="form-control{{ $errors->has('district') ? ' is-invalid' : '' }}" name="district" autofocus>
-                                        <option value="">اتخاب کنید</option>
-                                        <option value="1">ارشد-سراسري</option>
-                                        <option value="2">غيرمتمركز</option>
-                                    </select>
+                                <div class="col-md-7 text-right">
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="district" id="district" value="1">
+                                        <label class="form-check-label" for="district">
+                                            ارشد-سراسري
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="district" id="district" value="2">
+                                        <label class="form-check-label" for="district">
+                                            غيرمتمركز
+                                        </label>
+                                    </div>
 
                                     @if ($errors->has('district'))
                                         <span class="invalid-feedback" role="alert">

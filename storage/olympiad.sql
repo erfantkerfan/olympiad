@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 19, 2019 at 09:51 AM
+-- Generation Time: Jul 21, 2019 at 05:14 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -46,7 +46,6 @@ CREATE TABLE `applicants` (
   `state` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `state_note` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `3_d` int(11) DEFAULT NULL,
   `4_b` int(11) DEFAULT NULL,
   `4_l` int(11) DEFAULT NULL,
   `4_d` int(11) DEFAULT NULL,
@@ -56,6 +55,7 @@ CREATE TABLE `applicants` (
   `j_b` int(11) DEFAULT NULL,
   `j_l` int(11) DEFAULT NULL,
   `j_d` int(11) DEFAULT NULL,
+  `s_b` int(11) DEFAULT NULL,
   `dorm` bigint(20) UNSIGNED DEFAULT NULL,
   `d_3` int(11) DEFAULT NULL,
   `d_4` int(11) DEFAULT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE `applicants` (
 -- Dumping data for table `applicants`
 --
 
-INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `3_d`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
+INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
 (1, NULL, 'ميرداود', 'حبيب زاده', 'ميرنقي', '1720111510', 2, '1', NULL, NULL, 1, NULL, 1, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-19 08:47:22'),
 (2, NULL, 'محمد', 'عافي', 'علي اكبر', '640327486', 2, '1', NULL, NULL, 1, NULL, 1, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (3, NULL, 'مجتبي', 'مولا', 'خليل', '1810345332', 2, '1', NULL, NULL, 1, NULL, 1, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -279,7 +279,7 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (202, NULL, 'شکیلا', 'زرین نگار', 'علی', '923642528', 1, '2', NULL, NULL, 130, NULL, 4, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (203, NULL, 'عليرضا', 'پژمان', 'اكبر', '2500469141', 2, '1', NULL, NULL, 130, NULL, 4, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (204, NULL, 'علي', 'زنديه', 'فريدون', '371659582', 2, '1', NULL, NULL, 130, NULL, 4, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `3_d`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
+INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
 (205, NULL, 'ميترا', 'شهرائيني', 'محمدحسين', '923664221', 1, '1', NULL, NULL, 130, NULL, 4, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (206, NULL, 'مهديه', 'نوري بيدگلي', 'حسنعلي', '6190061346', 1, '2', NULL, NULL, 130, NULL, 4, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (207, NULL, 'مارال', 'ذکری', 'هوشیار', '9411060210', 1, '2', NULL, NULL, 130, NULL, 4, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -483,7 +483,7 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (405, NULL, 'پریا', 'خسروی', 'علی', '20239831', 1, '2', NULL, NULL, 14, NULL, 8, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (406, NULL, 'رویا', 'سینائی', 'نادر', '1742016091', 1, '2', NULL, NULL, 14, NULL, 8, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (407, NULL, 'ماندانا', 'عسکری', 'علیرضا', '1272216683', 1, '2', NULL, NULL, 14, NULL, 8, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `3_d`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
+INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
 (408, NULL, 'فاطمه ', ' حق شناس', 'محمد علی', '6790021922', 1, '2', NULL, NULL, 16, NULL, 8, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (409, NULL, 'فاطمه', ' طیبی خرمی', 'احمدعلی', '2282316691', 1, '2', NULL, NULL, 16, NULL, 8, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (410, NULL, 'الهه', ' نیک آئین', 'داریوش', '2282066006', 1, '2', NULL, NULL, 16, NULL, 8, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -687,7 +687,7 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (608, NULL, 'فاطمه', 'طاهر نژاد', 'قربانعلی', '2050763591', 1, '2', NULL, NULL, 130, NULL, 11, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (609, NULL, 'زهرا ', 'یوسف زاده روشن', 'علی مردان', '2050771932', 1, '2', NULL, NULL, 130, NULL, 11, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (610, NULL, 'فهيمه', 'كوهكن', 'عبدالله', '2440050474', 1, '1', NULL, NULL, 1, NULL, 12, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `3_d`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
+INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
 (611, NULL, 'محدثه', 'زيديان دستجردي', 'عبدالحسين', '6600065052', 1, '1', NULL, NULL, 2, NULL, 12, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (612, NULL, 'زهرا', 'جان نثاری', 'محمد رضا', '1272290913', 1, '2', NULL, NULL, 5, NULL, 12, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (613, NULL, 'حورا سادات', 'حسینی', 'سید مرتضی', '1272493172', 1, '2', NULL, NULL, 5, NULL, 12, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -890,7 +890,7 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (810, NULL, 'مریم', 'بدرخانی', 'محمد ', '3860818120', 1, '2', NULL, NULL, 5, NULL, 16, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (811, NULL, 'مرضیه ', 'سلیمی قلعه تکی', 'خداوردی', '1160332134', 1, '2', NULL, NULL, 5, NULL, 16, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (812, NULL, 'فاطمه', 'يزدي نيك', 'عباس', '4311142560', 1, '2', NULL, NULL, 5, NULL, 16, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `3_d`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
+INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
 (813, NULL, 'سيدعرفان', 'حسيني', 'سيدسعيد', '1120162610', 2, '1', NULL, NULL, 7, NULL, 16, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (814, NULL, 'مریم', 'دارستانی فراهانی', 'مرتضی', '76719596', 1, '2', NULL, NULL, 7, NULL, 16, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (815, NULL, 'بهنام', ' نيکپور', 'ابراهیم', '1361751487', 2, '2', NULL, NULL, 9, NULL, 16, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -1093,7 +1093,7 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (1012, NULL, 'سیده سحر', 'سیدنژاد', 'سید حسن', '4830118636', 1, '2', NULL, NULL, 18, NULL, 19, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1013, NULL, 'حانیه', 'غدیری', 'یونس', '2050671821', 1, '2', NULL, NULL, 18, NULL, 19, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1014, NULL, 'علي', 'بدخشان', 'عنايت الله', '1742107540', 2, '1', NULL, NULL, 18, NULL, 19, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `3_d`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
+INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
 (1015, NULL, 'رامین', 'دهقان', 'مجید', '19633114', 2, '2', NULL, NULL, 130, NULL, 19, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1016, NULL, 'علی', 'ميری', 'اسماعیل', '5630085735', 2, '2', NULL, NULL, 130, NULL, 19, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1017, NULL, 'علي', 'فلاحي', 'محمد', '1272521850', 2, '1', NULL, NULL, 130, NULL, 19, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -1295,7 +1295,7 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (1213, NULL, 'حمید ', 'سلطاني ابري', 'غلامرضا', '4880302937', 2, '2', NULL, NULL, 11, NULL, 23, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1214, NULL, 'محمد', 'کرد تمینی', 'عبدالرشید', '3611135305', 2, '2', NULL, NULL, 12, NULL, 23, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1215, NULL, 'مهلا', 'عباسی قرائی', 'علی', '3060362947', 1, '2', NULL, NULL, 12, NULL, 23, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `3_d`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
+INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
 (1216, NULL, 'محمد', 'افروغ', 'اکبر ', '4160542999', 2, '2', NULL, NULL, 14, NULL, 23, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1217, NULL, 'زینب', 'سواعدی', 'محمد', '1742821911', 1, '2', NULL, NULL, 14, NULL, 23, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1218, NULL, 'مهبد', 'فارابی', 'محمد', '4630081272', 2, '2', NULL, NULL, 14, NULL, 23, NULL, NULL, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -1425,7 +1425,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2019_07_17_135605_create_universities_table', 2),
 (9, '2019_07_17_145637_create_majors_table', 2),
 (10, '2019_07_17_145658_create_dorms_table', 2),
-(16, '2019_07_17_155534_create_applicants_table', 3);
+(16, '2019_07_17_155534_create_applicants_table', 3),
+(19, '2019_07_21_212107_add_s_b_to_applicants', 4),
+(20, '2019_07_21_212132_add_s_b_to_universities', 4),
+(23, '2019_07_21_213634_remove_d_b_in_universities', 5),
+(24, '2019_07_21_213653_remove_d_b_in_applicants', 5);
 
 -- --------------------------------------------------------
 
@@ -1436,7 +1440,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `universities` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `3_d` int(11) DEFAULT NULL,
   `4_b` int(11) DEFAULT NULL,
   `4_l` int(11) DEFAULT NULL,
   `4_d` int(11) DEFAULT NULL,
@@ -1446,6 +1449,7 @@ CREATE TABLE `universities` (
   `j_b` int(11) DEFAULT NULL,
   `j_l` int(11) DEFAULT NULL,
   `j_d` int(11) DEFAULT NULL,
+  `s_b` int(11) DEFAULT NULL,
   `dorm` int(11) DEFAULT NULL,
   `d_3` int(11) DEFAULT NULL,
   `d_4` int(11) DEFAULT NULL,
@@ -1460,7 +1464,7 @@ CREATE TABLE `universities` (
 -- Dumping data for table `universities`
 --
 
-INSERT INTO `universities` (`id`, `name`, `3_d`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `created_at`, `updated_at`) VALUES
+INSERT INTO `universities` (`id`, `name`, `4_b`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `created_at`, `updated_at`) VALUES
 (1, 'حوزه علميه قم -برادران', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, 'دانشگاه اصفهان', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (3, 'دانشگاه الزهرا/س /-تهران', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -1690,7 +1694,7 @@ ALTER TABLE `majors`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `universities`

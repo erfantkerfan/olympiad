@@ -28,7 +28,20 @@
                                         <td scope="row"><textarea form="config_form" style="width: 300px" class="form-control" name="name" id="name"></textarea></td>
                                         <td scope="row"><input form="config_form" class="form-control text-center" name="supervisor" id="supervisor" value="{{old('supervisor')}}"></td>
                                         @foreach($time_array as $key=>$value)
-                                            <td scope="row"><input form="config_form" class="form-control text-center" name="{{$value}}" id="{{$value}}" value=""></td>
+                                            <td scope="row">
+                                                <div class="form-check-inline">
+                                                    <input form="config_form" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1">
+                                                    <label class="form-check-label" for="{{$value}}">
+                                                        بله
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input form="config_form" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0">
+                                                    <label class="form-check-label" for="{{$value}}">
+                                                        خبر
+                                                    </label>
+                                                </div>
+                                            </td>
                                         @endforeach
                                         <td scope="row"><button form="config_form" type="submit" class="btn btn-sm">ثبت</button></td>
                                     </tr>
@@ -86,7 +99,20 @@
                                             <td scope="row"><textarea form="config_form{{$loop->iteration}}" style="width: 300px" class="form-control" name="name" id="name">{{$major->name}}</textarea></td>
                                             <td scope="row"><input form="config_form{{$loop->iteration}}" class="form-control text-center" name="supervisor" id="supervisor" value="{{$major->supervisor}}"></td>
                                             @foreach($time_array as $key=>$value)
-                                                <td scope="row"><input form="config_form{{$loop->parent->iteration}}" class="form-control text-center" name="{{$value}}" id="{{$value}}" value="{{$major->$value}}"></td>
+                                                <td scope="row">
+                                                    <div class="form-check-inline">
+                                                        <input form="config_form{{$loop->parent->iteration}}" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1" @if($major->$value==1) checked @endif>
+                                                        <label class="form-check-label" for="{{$value}}">
+                                                            بله
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check-inline">
+                                                        <input form="config_form{{$loop->parent->iteration}}" class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0" @if($major->$value===0) checked @endif>
+                                                        <label class="form-check-label" for="{{$value}}">
+                                                            خبر
+                                                        </label>
+                                                    </div>
+                                                </td>
                                             @endforeach
                                             <td scope="row"><button form="config_form{{$loop->iteration}}" type="submit" class="btn btn-sm">اعمال</button></td>
                                         </tr>
