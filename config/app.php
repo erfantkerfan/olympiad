@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Hekmatinasser\Verta\VertaServiceProvider::class,
+        niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -227,6 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Verta' => Hekmatinasser\Verta\Verta::class,
+        'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
 
     ],
 
