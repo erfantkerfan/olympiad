@@ -30,8 +30,7 @@
                                 <tr class="text-center">
                                     <td scope="col">{{ $major->name }}</td>
                                     @foreach($map as $key=>$value)
-                                        {{--                                        <td scope="col" @if(!$loop->first) style="border-right: 2px solid black;" @endif>{{$var[$key]['nashode']}}</td>--}}
-                                        <td scope="col">{{$report[$major->id][$key]['nashode']}}</td>
+                                        <td scope="col" @if(!$loop->first) style="border-right: 2px solid black;" @endif>{{$report[$major->id][$key]['nashode']}}</td>
                                         <td scope="col">{{$report[$major->id][$key]['kamel']}}</td>
                                         <td scope="col">{{$report[$major->id][$key]['movaghat']}}</td>
                                         <td scope="col">{{$report[$major->id][$key]['namomken']}}</td>

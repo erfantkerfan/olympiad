@@ -4,6 +4,23 @@
     <div class="container-fluid" dir="rtl">
         <div class="row justify-content-center">
             <div class="col-md-12">
+                @if(Session::has('alert'))
+                    <div class="col-4 mx-auto" dir="rtl">
+                        <div class="text-center">
+                            <div class="alert alert-success alert-dismissible show" role="alert">
+                                <h4 class="alert-heading">
+                                    <a href="{{Session::get('alert')}}">
+                                        دانلود فرم پذیرش
+                                    </a>
+                                </h4>
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">
+                                <span class="fa fa-times-circle" style="color:red;">
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endif
                 <div class="card">
                     <div class="card-header text-center">لیست متقاضیان</div>
 

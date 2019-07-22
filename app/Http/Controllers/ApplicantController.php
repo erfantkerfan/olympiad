@@ -7,6 +7,7 @@ use App\Dorm;
 use App\Major;
 use App\University;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ApplicantController extends Controller
 {
@@ -104,6 +105,10 @@ class ApplicantController extends Controller
             $applicant -> d_room = $university->d_room;
         }
         $applicant->save();
+        if( $applicant->state ==1 or $applicant->state==2 ){
+            $alert = Route('pdf',['id'=>$applicant->id]);
+            Session::flash('alert', (string)$alert);
+        }
         return redirect()->route('applicant_list');
     }
 }
