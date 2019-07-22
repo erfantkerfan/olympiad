@@ -120,7 +120,7 @@
                                     <p class="card-text">
                                         <div class="row">
                                             @foreach($food_array as $key=>$value)
-                                                @if($applicant->$value==0)
+                                                @if($applicant->$value==1)
                                                     <div class="col-md-3 m-b-md">
                                                         <div class="card">
                                                             <div class="card-body">
