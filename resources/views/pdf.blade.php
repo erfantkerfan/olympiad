@@ -53,8 +53,8 @@
 <body style="font-family:'Bmitra;'">
 <div id="app" style="font-family:'Bmitra;'">
     <main class="py-4">
-        <div class="container" dir="rtl">
-            <div class="col-md-10">
+        <div class="container-fluid" dir="rtl">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-body text-right">
                         <div class="card">
@@ -123,23 +123,33 @@
                                         <div class="row">
                                             @foreach($food_array as $key=>$value)
                                                 @if($applicant->$value==1)
-                                                    <div class="col-md-3 m-b-md">
+                                                    <div class="col-md-4 m-b-md my-1">
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                <span class="float-left">
-                                                                    <img src="{{ asset('image/PWU.png') }}">
-                                                                </span>
-                                                                <span class="float-right">
-                                                                    <img src="{{ asset('image/SBU.png') }}">
-                                                                </span>
-                                                                <h5 class="card-title text-center">ژتون غذا</h5>
-                                                                <p class="card-text text-center">
-                                                                {{$applicant->name}}
-                                                                {{$applicant->f_name}}
-                                                                {{$applicant->SSN}}
-                                                                <br>
-                                                                {{$key}}
-                                                                </p>
+                                                                <div class="col-6">
+                                                                    <span class="float-left">
+                                                                        <img src="{{ asset('image/PWU.png') }}">
+                                                                    </span>
+                                                                    <span class="float-right">
+                                                                        <img src="{{ asset('image/SBU.png') }}">
+                                                                    </span>
+                                                                    {{--<h5 class="card-title text-center">ژتون غذا</h5>--}}
+                                                                    <br>
+                                                                    <br>
+                                                                    <p class="card-text text-center">
+                                                                        {{$applicant->name}}
+                                                                        {{$applicant->f_name}}
+                                                                        <br>
+                                                                        {{$applicant->SSN}}
+                                                                        <br>
+                                                                        {{$key}}
+                                                                    </p>
+                                                                    <br>
+                                                                    <br>
+                                                                    <br>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
