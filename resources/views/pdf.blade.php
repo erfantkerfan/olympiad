@@ -126,7 +126,7 @@
                                         @if($applicant->$value==1)
                                             <div class="col-md-4 my-1">
                                                 <div class="card" style="border-width:3px ;border-color: black; border-style: dotted">
-                                                    <img class="card-img" src="/image/background.jpg" alt="Card image" style="opacity: 0.5;">
+                                                    <img class="card-img" src="/image/background.JPG" alt="Card image" style="opacity: 0.5;">
                                                     <div class="card-img-overlay">
                                                         <div class="col-6">
                                                             <div class="text-center">
