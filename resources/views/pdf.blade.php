@@ -112,7 +112,9 @@
                                 </p>
                             </div>
                         </div>
-                        <br>
+                        <div class="text-center">
+                            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                        </div>
                         @if($has_food)
                             <div class="card">
                                 <div class="card-body">
@@ -124,25 +126,33 @@
                                                     <div class="col-md-3 m-b-md">
                                                         <div class="card">
                                                             <div class="card-body">
+                                                                <span class="float-left">
+                                                                    <img src="{{ asset('image/PWU.png') }}">
+                                                                </span>
+                                                                <span class="float-right">
+                                                                    <img src="{{ asset('image/SBU.png') }}">
+                                                                </span>
                                                                 <h5 class="card-title text-center">ژتون غذا</h5>
-                                                        <p class="card-text text-center">
-                                                            {{$applicant->name}}
-                                                            {{$applicant->f_name}}
-                                                            {{$applicant->SSN}}
-                                                            <br>
-                                                            {{$key}}
-                                                        </p>
+                                                                <p class="card-text text-center">
+                                                                {{$applicant->name}}
+                                                                {{$applicant->f_name}}
+                                                                {{$applicant->SSN}}
+                                                                <br>
+                                                                {{$key}}
+                                                                </p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                @endif
+                                            @endforeach
                                         </div>
-                                        @endif
-                                        @endforeach
-                                    </div>
                                     </p>
                                 </div>
                             </div>
                         @endif
-                        <br>
+                        <div class="text-center">
+                            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                        </div>
                         @if($has_dorm)
                             <div class="card">
                                 <div class="card-body">
@@ -150,14 +160,14 @@
                                     <p class="card-text">
                                         باسلام
                                         <br>
-                                        @if($applicant->dorm)
-                                            @if(\App\Dorm::find($applicant->dorm)->gender==1)
-                                                سرکار خانم
-                                            @elseif(\App\Dorm::find($applicant->dorm)->gender==2)
-                                                جناب آقای
-                                            @endif
+                                        {{--@if($applicant->dorm)--}}
+                                            {{--@if(\App\Dorm::find($applicant->dorm)->gender==1)--}}
+                                                {{--سرکار خانم--}}
+                                            {{--@elseif(\App\Dorm::find($applicant->dorm)->gender==2)--}}
+                                                {{--جناب آقای--}}
+                                            {{--@endif--}}
                                         {{\App\Dorm::find($applicant->dorm)->supervisor}}
-                                        @endif
+                                        {{--@endif--}}
                                         لطفا
                                         @if($applicant->gender==1)
                                             سرکار خانم

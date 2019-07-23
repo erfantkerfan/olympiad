@@ -4,6 +4,21 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
+                @if(Session::has('alert'))
+                    <div class="col-8 mx-auto" dir="rtl">
+                        <div class="text-center">
+                            <div class="alert alert-success alert-dismissible show" role="alert">
+                                <h4 class="alert-heading">
+                                    {{Session::get('alert')}}
+                                </h4>
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">
+                                <span class="fa fa-times-circle" style="color:red;">
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endif
                 <div class="card">
                     <div class="card-header text-center">پذیرش متقاضی</div>
 
@@ -220,13 +235,13 @@
                                 <div class="col-md-7 text-right">
 
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="card" id="card" value="1" @if($applicant->gender==1) checked @endif>
+                                        <input class="form-check-input" type="radio" name="card" id="card" value="1" @if($applicant->card==1) checked @endif>
                                         <label class="form-check-label" for="card">
                                             بله
                                         </label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="card" id="card" value="0" @if($applicant->gender===0) checked @endif>
+                                        <input class="form-check-input" type="radio" name="card" id="card" value="0" @if($applicant->card===0) checked @endif>
                                         <label class="form-check-label" for="card">
                                             خبر
                                         </label>
@@ -260,13 +275,13 @@
                                 <div class="col-md-7 text-right">
 
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="team" id="team" value="1" @if($applicant->gender==1) checked @endif>
+                                        <input class="form-check-input" type="radio" name="team" id="team" value="1" @if($applicant->team==1) checked @endif>
                                         <label class="form-check-label" for="team">
                                             بله
                                         </label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="team" id="team" value="0" @if($applicant->gender===0) checked @endif>
+                                        <input class="form-check-input" type="radio" name="team" id="team" value="0" @if($applicant->team===0) checked @endif>
                                         <label class="form-check-label" for="team">
                                             خبر
                                         </label>
@@ -323,7 +338,9 @@
                                     <select id="dorm" class="form-control{{ $errors->has('dorm') ? ' is-invalid' : '' }}" name="dorm" autofocus>
                                         <option value="">بدون نیاز به خوابگاه</option>
                                         @foreach($dorms as $dorm)
-                                            <option value="{{$dorm->id}}" @if($applicant->dorm==$dorm->id) selected @endif>{{$dorm->name}}</option>
+                                            @if($dorm->gender==$applicant->gender)
+                                                <option value="{{$dorm->id}}" @if($applicant->dorm==$dorm->id) selected @endif>{{$dorm->name}}</option>
+                                            @endif
                                         @endforeach
                                     </select>
 
@@ -434,6 +451,12 @@
                                         <input class="form-check-input" type="radio" name="state" id="state" value="3" @if($applicant->state==3) checked @endif>
                                         <label class="form-check-label" for="state">
                                             پذیرش ممکن نیست
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="state" id="state" value="" @if($applicant->state==null) checked @endif>
+                                        <label class="form-check-label" for="state">
+                                            پذیرش نشده
                                         </label>
                                     </div>
 

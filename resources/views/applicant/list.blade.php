@@ -223,7 +223,7 @@
                                                 @if($applicant->state==1)
                                                     <span style="color: green">پذیرش کامل</span>
                                                 @elseif($applicant->state==2)
-                                                    <span style="color: yellow">پذیرش موقت</span>
+                                                    <span style="color: blue">پذیرش موقت</span>
                                                 @elseif($applicant->state==3)
                                                     <span style="color: red">پذیرش ممکن نیست</span>
                                                 @else

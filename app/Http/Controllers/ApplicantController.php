@@ -90,9 +90,27 @@ class ApplicantController extends Controller
             'خوابگاه جمعه'=>'d_j',
         ];
         $applicant = Applicant::FindOrFail($id);
+
+
+        foreach ($dorm_array as $key=>$value){
+            if($request->$value==1 and $request->dorm==null){
+                $alert = "نوع خوابگاه مشخص نشده";
+                Session::flash('alert', (string)$alert);
+                return redirect()->back();
+            }
+        }
+        if($request->dorm!=null){
+            $dorm_count = Applicant::where('dorm','=',$request->dorm)->count();
+            if($dorm_count +1 > Dorm::Find($request->dorm)->capacity){
+                $alert = "ظرفیت خوابگاه پر شده است";
+                Session::flash('alert', (string)$alert);
+                return redirect()->back();
+            }
+        }
+
         if ($request->team!=1){
             $applicant -> fill($request->all());
-        }else{
+        }elseif($request->team==1){
             $applicant -> fill($request->all());
             $university = $applicant->university()->first();
             foreach ($food_array as $key=>$value){
@@ -101,14 +119,29 @@ class ApplicantController extends Controller
             foreach ($dorm_array as $key=>$value){
                 $applicant -> $value = $university->$value;
             }
-            $applicant -> dorm = $university->dorm;
-            $applicant -> d_room = $university->d_room;
+        }
+        if( $applicant->state ==1 or $applicant->state==2 ) {
+            $alert = Route('pdf', ['id' => $applicant->id]);
+            Session::flash('alert', (string)$alert);
+        }elseif($applicant->state !=3){
+            $applicant->city = null;
+            $applicant->mobile = null;
+            $applicant->team = null;
+            $applicant->card = null;
+            $applicant->state = null;
+            $applicant->state_note = null;
+            $applicant->dorm = null;
+            $applicant->d_room = null;
+            $applicant->special_case = null;
+            $applicant->special_disease = null;
+            foreach ($food_array as $key=>$value){
+                $applicant -> $value = null;
+            }
+            foreach ($dorm_array as $key=>$value){
+                $applicant -> $value = null;
+            }
         }
         $applicant->save();
-        if( $applicant->state ==1 or $applicant->state==2 ){
-            $alert = Route('pdf',['id'=>$applicant->id]);
-            Session::flash('alert', (string)$alert);
-        }
         return redirect()->route('applicant_list');
     }
 }

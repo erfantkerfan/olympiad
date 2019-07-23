@@ -78,7 +78,7 @@
                     <div class="card-body">
                         <div class="table-responsive text-nowrap">
                             <table class="table">
-                                <thead>
+                                <thead class="position-sticky">
                                 <tr class="text-center">
                                     <th scope="col">ردیف</th>
                                     <th scope="col">
