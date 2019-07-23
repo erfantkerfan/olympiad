@@ -126,7 +126,7 @@
                                         <option value="3" @if($applicant->type==3) selected @endif>همراه داوطلب</option>
                                         <option value="4" @if($applicant->type==4) selected @endif>عوامل دانشگاه</option>
                                         <option value="5" @if($applicant->type==5) selected @endif>عوامل سنجش</option>
-                                        <option value="6" @if($applicant->type==5) selected @endif>اساتید و ناظرین</option>
+                                        <option value="6" @if($applicant->type==6) selected @endif>اساتید و ناظرین</option>
                                     </select>
 
                                     @if ($errors->has('type'))
