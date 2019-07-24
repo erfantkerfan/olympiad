@@ -305,18 +305,24 @@
 
                                     <div class="col-md-7 text-right">
 
-                                        <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1" @if($applicant->$value==1) checked @endif>
-                                            <label class="form-check-label" for="{{$value}}">
-                                                بله
-                                            </label>
+                                        <div>
+                                            <div class="form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="1" @if($applicant->$value==1) checked @endif>
+                                                <label class="form-check-label" for="{{$value}}">
+                                                    بله
+                                                </label>
+                                            </div>
+                                            <div class="form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0" @if($applicant->$value===0) checked @endif>
+                                                <label class="form-check-label" for="{{$value}}">
+                                                    خیر
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="{{$value}}" id="{{$value}}" value="0" @if($applicant->$value===0) checked @endif>
-                                            <label class="form-check-label" for="{{$value}}">
-                                                خیر
-                                            </label>
-                                        </div>
+                                        @if(in_array($loop->index,[1,4,7]))
+                                            <br>
+                                            <br>
+                                        @endif
 
                                         @if ($errors->has($value))
                                             <span class="invalid-feedback" role="alert">
