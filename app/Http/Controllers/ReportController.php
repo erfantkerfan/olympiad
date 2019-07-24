@@ -117,6 +117,13 @@ class ReportController extends Controller
         $applicants = Applicant::where('type','=',1)->orwhere('type','=',null)->get();
         $universities = University::all();
         $map = ['women'=>'1','men'=>'2','other'=>'3'];
+        $sum = [];
+        foreach ($map as $key => $value) {
+            $sum[$key]['nashode'] = $applicants->where('gender', '=', $value)->where('state', '=', null)->where('type', '=', 1)->count();
+            $sum[$key]['kamel'] = $applicants->where('gender', '=', $value)->where('state', '=', 1)->where('type', '=', 1)->count();
+            $sum[$key]['movaghat'] = $applicants->where('gender', '=', $value)->where('state', '=', 2)->where('type', '=', 1)->count();
+            $sum[$key]['namomken'] = $applicants->where('gender', '=', $value)->where('state', '=', 3)->where('type', '=', 1)->count();
+        };
         foreach ($universities as $university) {
             $layer = $applicants->where('university', '=', $university->id);
             $report[$university->id] = array();
@@ -127,7 +134,8 @@ class ReportController extends Controller
                 $report[$university->id][$key]['namomken'] = $layer->where('gender', '=', $value)->where('state', '=', 3)->count();
             };
         }
-        return view('report.university')->with(compact('report','map','universities'));
+//        return $sum;
+        return view('report.university')->with(compact('report','map','universities','sum'));
     }
 
 }
