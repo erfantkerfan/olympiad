@@ -116,7 +116,7 @@ class ReportController extends Controller
         $report = [];
         $applicants = Applicant::where('type','=',1)->orwhere('type','=',null)->get();
         $universities = University::all();
-        $map = ['men'=>'1','women'=>'2','other'=>'3'];
+        $map = ['women'=>'1','men'=>'2','other'=>'3'];
         foreach ($universities as $university) {
             $layer = $applicants->where('university', '=', $university->id);
             $report[$university->id] = array();
