@@ -20,8 +20,8 @@ class ExtraController extends Controller
     public function pdf($id, Request $request)
     {
         $food_array = $y = array_reverse([
-            'ناهار چهارشنبه'=>'4_l',
-            'شام چهارشنبه'=>'4_d',
+//            'ناهار چهارشنبه'=>'4_l',
+//            'شام چهارشنبه'=>'4_d',
             'صبحانه پنجشنبه'=>'5_b',
             'ناهار پنجشنبه'=>'5_l',
             'شام پنجشنبه'=>'5_d',
@@ -31,8 +31,8 @@ class ExtraController extends Controller
             'صبحانه شنبه'=>'s_b',
         ]);
         $dorm_array = [
-            'سه شنبه'=>'d_3',
-            'چهارشنبه'=>'d_4',
+//            'سه شنبه'=>'d_3',
+//            'چهارشنبه'=>'d_4',
             'پنج شنبه'=>'d_5',
             'جمعه'=>'d_j',
         ];
