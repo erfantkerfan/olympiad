@@ -319,7 +319,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        @if(in_array($loop->index,[1,4,7]))
+                                        @if(in_array($loop->index,[2,5]))
                                             <br>
                                             <br>
                                         @endif
