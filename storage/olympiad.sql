@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 26, 2019 at 05:25 AM
+-- Generation Time: Jul 26, 2019 at 06:17 AM
 -- Server version: 5.7.27-0ubuntu0.16.04.1
 -- PHP Version: 7.2.20-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -1528,8 +1528,8 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (1448, NULL, 'منوچهر', 'ظهوریان', '،', '186', 2, NULL, NULL, NULL, 136, 0, 24, NULL, '1', NULL, '4', NULL, 1, NULL, 1, 1, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 06:05:48', '2019-07-24 06:06:35'),
 (1449, NULL, 'مرتضی', 'گودرزی', '،', '187', 2, NULL, NULL, NULL, 136, NULL, 24, NULL, '1', NULL, '4', NULL, 1, NULL, 1, 1, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 06:07:24', '2019-07-24 06:08:28'),
 (1450, NULL, 'حمید', 'جنتی', '،', '188', 2, NULL, NULL, NULL, 133, NULL, 24, NULL, '1', NULL, '4', 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 06:46:16', '2019-07-26 05:25:16'),
-(1451, NULL, 'یاور', 'زمانی', '،', '189', 2, NULL, NULL, NULL, 133, NULL, 24, NULL, '1', NULL, '4', 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 06:47:45', '2019-07-24 06:48:12'),
-(1452, NULL, 'مهدی', 'هادیان', '،', '190', 2, NULL, NULL, NULL, 136, NULL, 24, NULL, '1', NULL, '4', 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 06:59:01', '2019-07-24 06:59:34'),
+(1451, NULL, 'یاور', 'زمانی', '،', '189', 2, NULL, NULL, NULL, 133, NULL, 24, NULL, '1', NULL, '4', 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 06:47:45', '2019-07-26 05:56:08'),
+(1452, NULL, 'مهدی', 'هادیان', '،', '190', 2, NULL, NULL, NULL, 136, NULL, 24, NULL, '1', NULL, '4', 1, 1, 0, 0, 0, 0, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 06:59:01', '2019-07-26 05:25:41'),
 (1453, NULL, 'محمدرضا', 'ابهریان', '،', '191', 2, NULL, NULL, NULL, 135, NULL, 24, NULL, '1', NULL, '4', 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 07:00:13', '2019-07-24 07:00:40'),
 (1454, NULL, 'دكتر عادل', 'رستگار مقم', '-', '0932049680', 2, NULL, NULL, NULL, 25, 1, 24, NULL, '1', NULL, '2', NULL, 1, 1, 1, 1, 1, 1, 1, NULL, 7, NULL, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, '2019-07-24 07:19:47', '2019-07-24 07:31:10'),
 (1455, NULL, 'مهدي', 'منفردي', '-', '0930734270', 2, NULL, NULL, '09153234650', 25, 1, 24, NULL, '1', NULL, '2', NULL, 1, 1, 1, 1, 1, 1, 1, NULL, 7, NULL, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, '2019-07-24 07:27:19', '2019-07-24 08:16:35'),
@@ -1540,10 +1540,10 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (1460, NULL, 'سامان', 'اشرف جنگویی', 'محمد علی', '2981788450', 2, NULL, NULL, NULL, 37, 0, 24, NULL, '1', NULL, '3', NULL, 1, 1, 1, 1, 1, 1, 0, NULL, NULL, NULL, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, '2019-07-24 08:13:20', '2019-07-24 08:13:56'),
 (1461, NULL, 'شایان', 'اشرف جنگویی', 'محمد علی', '11111111', 2, NULL, NULL, NULL, 37, 0, 24, NULL, '1', NULL, '3', NULL, 1, 1, 1, 1, 1, 1, 0, NULL, NULL, NULL, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, '2019-07-24 08:15:04', '2019-07-24 08:15:24'),
 (1462, NULL, 'محمد حسین', 'خواجه زاده', '-', '4579272838', 2, NULL, NULL, NULL, 87, 1, 24, NULL, '1', NULL, '2', 1, 1, 1, 1, 1, 1, 1, NULL, NULL, 7, NULL, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:10:30', '2019-07-24 09:16:02'),
-(1463, NULL, 'حبیب الله', 'رضاپور', '-', '192', NULL, NULL, NULL, NULL, 136, NULL, 24, NULL, '1', NULL, '4', 1, 0, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:11:34', '2019-07-24 09:22:22'),
-(1464, NULL, 'علیرضا', 'کاوند', '-', '193', NULL, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', 1, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:14:36', '2019-07-24 09:23:17'),
+(1463, NULL, 'حبیب الله', 'رضاپور', '-', '192', 2, NULL, NULL, NULL, 136, NULL, 24, NULL, '1', NULL, '4', 1, 0, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:11:34', '2019-07-24 09:22:22'),
+(1464, NULL, 'علیرضا', 'کاوند', '-', '193', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', 1, NULL, NULL, NULL, NULL, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:14:36', '2019-07-26 05:54:04'),
 (1465, NULL, 'کوروش', 'شیروانی', '-', '194', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', 1, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:15:25', '2019-07-24 09:24:49'),
-(1466, NULL, 'ایرج', 'مطهر', '-', '195', NULL, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:16:49', '2019-07-26 05:19:31'),
+(1466, NULL, 'ایرج', 'مطهر', '-', '195', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:16:49', '2019-07-26 05:19:31'),
 (1467, NULL, 'علیرضا', 'رجبی', '-', '196', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:17:49', '2019-07-24 09:27:02'),
 (1468, NULL, 'علي', 'میروهابی', '-', '197', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', 1, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:18:56', '2019-07-24 09:26:11'),
 (1469, NULL, 'مرتضی', 'برزگر', '-', '198', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', 1, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 09:20:43', '2019-07-24 09:24:13'),
@@ -1575,8 +1575,8 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (1496, NULL, 'رحیم', 'نهاله', '-', '1708893432', 2, NULL, NULL, NULL, 35, 0, 24, NULL, '1', NULL, '3', NULL, 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, '2019-07-24 16:19:22', '2019-07-24 16:21:25'),
 (1497, NULL, 'سید حمیدرضا', 'موسوی', 'سید اصحاق', '70707070', 2, NULL, NULL, '09191324606', 135, NULL, 24, NULL, '1', 'آمبولانس پرستار', '4', NULL, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 16:42:19', '2019-07-24 16:44:31'),
 (1498, NULL, 'احمد', 'قنبری', '-', '80808080', 2, NULL, NULL, NULL, 136, NULL, 24, NULL, '1', 'آمبولانس راننده', '4', NULL, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-24 16:43:49', '2019-07-24 16:44:57'),
-(1499, NULL, 'عسگر', 'تازیکه', '-', '2110172924', 2, NULL, NULL, NULL, NULL, NULL, 24, NULL, '1', 'راننده دانشگاه گلستان', '3', NULL, 1, 1, 1, 1, 1, 1, NULL, NULL, 4, NULL, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, '2019-07-24 16:47:17', '2019-07-24 16:48:14'),
-(1500, NULL, 'محمد', 'زیارت بان', '-', '2122785527', 2, NULL, NULL, NULL, NULL, NULL, 24, NULL, '1', 'راننده دانشگاه گلستان', '3', NULL, 1, 1, 1, 1, 1, 1, 0, NULL, 4, NULL, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, '2019-07-24 16:49:10', '2019-07-24 16:50:56');
+(1499, NULL, 'عسگر', 'تازیکه', '-', '2110172924', 2, NULL, NULL, NULL, 108, NULL, 24, NULL, '1', 'راننده دانشگاه گلستان', '3', NULL, 1, 1, 1, 1, 1, 1, NULL, NULL, 4, NULL, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, '2019-07-24 16:47:17', '2019-07-24 16:48:14'),
+(1500, NULL, 'محمد', 'زیارت بان', '-', '2122785527', 2, NULL, NULL, NULL, 108, NULL, 24, NULL, '1', 'راننده دانشگاه گلستان', '3', NULL, 1, 1, 1, 1, 1, 1, 0, NULL, 4, NULL, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, '2019-07-24 16:49:10', '2019-07-24 16:50:56');
 INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gender`, `district`, `city`, `mobile`, `university`, `team`, `major`, `card`, `state`, `state_note`, `type`, `4_l`, `4_d`, `5_b`, `5_l`, `5_d`, `j_b`, `j_l`, `j_d`, `s_b`, `dorm`, `d_3`, `d_4`, `d_5`, `d_j`, `d_room`, `special_case`, `special_disease`, `note1`, `note2`, `created_at`, `updated_at`) VALUES
 (1501, NULL, 'علی اضغر', 'کلاته', '-', '0490276776', 2, NULL, NULL, NULL, 134, 0, 24, 0, '1', 'ساختمان علامه جعفری', '4', NULL, NULL, 1, 1, 0, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 01:57:49', '2019-07-25 01:58:25'),
 (1502, NULL, 'مرتضی', 'توکلی', '،', '200', 2, NULL, NULL, NULL, 135, 1, 24, NULL, '1', NULL, '4', NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 03:58:41', '2019-07-25 04:00:45'),
@@ -1588,12 +1588,14 @@ INSERT INTO `applicants` (`id`, `uid`, `name`, `f_name`, `fa_name`, `SSN`, `gend
 (1508, NULL, 'حسین', 'ونایی', '-', '209', 2, NULL, NULL, NULL, 135, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 08:24:14', '2019-07-25 08:24:30'),
 (1509, NULL, 'حبیب', 'مهدی زاده', '-', '210', 2, NULL, NULL, NULL, 132, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 10:18:07', '2019-07-25 10:18:43'),
 (1510, NULL, 'جمال', 'بابایی', '-', '211', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 10:38:49', '2019-07-25 10:39:47'),
-(1511, NULL, 'محمد', 'اقبالی', '-', '212', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 10:59:30', '2019-07-25 11:00:01'),
+(1511, NULL, 'محمد', 'اقبالی', '-', '212', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 10:59:30', '2019-07-25 11:00:01'),
 (1512, NULL, 'رضا', 'برزآبادی فراهانی', '-', '213', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 11:02:05', '2019-07-25 11:02:27'),
 (1514, NULL, 'علی', 'یزدانی', '-', '214', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 11:08:54', '2019-07-25 11:09:15'),
 (1515, NULL, 'یاور', 'نیلاشی', '-', '215', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 11:10:20', '2019-07-25 11:10:40'),
 (1516, NULL, 'حسن', 'شریفیه', '-', '0072786469', 2, NULL, NULL, NULL, 132, NULL, 24, NULL, '1', NULL, '5', NULL, NULL, NULL, NULL, 1, 1, 1, NULL, NULL, 12, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-25 12:51:16', '2019-07-25 13:02:55'),
-(1517, NULL, 'محمدرضا', 'کامیاب', '-', '205', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-26 05:20:47', '2019-07-26 05:21:09');
+(1517, NULL, 'محمدرضا', 'کامیاب', '-', '205', 2, NULL, NULL, NULL, 134, NULL, 24, NULL, '1', NULL, '4', NULL, NULL, NULL, NULL, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-26 05:20:47', '2019-07-26 05:21:09'),
+(1518, NULL, 'راننده', 'دانشگاه گیلان', '،', '220', 2, NULL, NULL, NULL, 41, NULL, 24, NULL, '1', NULL, '3', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-26 05:59:35', '2019-07-26 06:00:46'),
+(1519, NULL, 'راننده', 'دانشگاه گیلان', '،', '221', 2, NULL, NULL, NULL, 41, NULL, 24, NULL, '1', NULL, '3', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-07-26 06:00:11', '2019-07-26 06:07:38');
 
 -- --------------------------------------------------------
 
@@ -1905,7 +1907,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `type`, `password`, `login`, `last_login`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'ghoreishi', '0', '$2y$10$EeuedaTbxua9S/z4iZ/el.U9Wh4WyvzF/p2meSjYrw74BW8WY1nJq', '1398-05-04 08:08:10', '1398-05-03 12:38:50', 'jxeyZoUpNnSQrfF2TaTsm1fbKvBafMAqCy1LQtSHkshVwCng3maJWtuuSYIG', '2019-07-17 10:19:23', '2019-07-26 03:38:10'),
-(2, 'root', '0', '$2y$10$/fwafBVKwbKF1YeCINesPO5SLiwxcSrDFE3hefR9WoOEO4HivSP.i', '1398-05-03 22:34:05', '1398-05-03 18:55:35', '93UvgAM32pcmDfsnQTsUiD71p07FdZD1m3B3PzVcyWsMagXRT2oz99WQpDRl', '2019-07-17 10:22:05', '2019-07-25 18:04:05'),
+(2, 'root', '0', '$2y$10$/fwafBVKwbKF1YeCINesPO5SLiwxcSrDFE3hefR9WoOEO4HivSP.i', '1398-05-04 10:05:15', '1398-05-03 22:34:05', '93UvgAM32pcmDfsnQTsUiD71p07FdZD1m3B3PzVcyWsMagXRT2oz99WQpDRl', '2019-07-17 10:22:05', '2019-07-26 05:35:15'),
 (3, 'farhadkhani', '1', '$2y$10$EeuedaTbxua9S/z4iZ/el.U9Wh4WyvzF/p2meSjYrw74BW8WY1nJq', '1398-05-03 09:22:25', '1398-05-03 06:14:58', NULL, NULL, '2019-07-25 04:52:25'),
 (4, 'shabani', '1', '$2y$10$EIRrDQsZeaHbCEuvUi/Zu.CoiHXtMneUr9NfhJVKZq72lFH3KMXD2', '1398-05-04 06:34:08', '1398-05-03 17:23:41', NULL, NULL, '2019-07-26 02:04:08');
 
@@ -1962,7 +1964,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `applicants`
 --
 ALTER TABLE `applicants`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1518;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1520;
 --
 -- AUTO_INCREMENT for table `dorms`
 --
