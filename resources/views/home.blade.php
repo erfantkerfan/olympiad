@@ -46,9 +46,9 @@
                             گزارش غذاخوری و خوابگاه ها
                         </button>
                     </a>
-                    <a href="{{Route('state_report')}}">
+                    <a href="{{Route('type_report')}}">
                         <button class="btn">
-                            گزارش وضعیت ها
+                            گزارش انواع متقاضیان
                         </button>
                     </a>
                     <a href="{{Route('major_report')}}">

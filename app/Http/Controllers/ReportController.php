@@ -75,23 +75,24 @@ class ReportController extends Controller
         }
         return view('report.cafe')->with(compact('food_array','applicants','food_sum','dorm_array','dorm_sum'));
     }
-    public function state()
+    public function type()
     {
-        $report1 = [];
-        $applicants1 = Applicant::where('type','=',1)->orwhere('type','=',null)->get();
-        $report1['nashode'] = $applicants1 -> where('state','=',null)->count();
-        $report1['kamel'] = $applicants1 -> where('state','=',1)->count();
-        $report1['movaghat'] = $applicants1 -> where('state','=',2)->count();
-        $report1['namomken'] = $applicants1 -> where('state','=',3)->count();
-        $report1 = (object)$report1;
-        $report2 = [];
-        $applicants2 = Applicant::where('type','>','1')->get();
-        $report2['nashode'] = $applicants2 -> where('state','=',null)->count();
-        $report2['kamel'] = $applicants2 -> where('state','=',2)->count();
-        $report2['movaghat'] = $applicants2 -> where('state','=',2)->count();
-        $report2['namomken'] = $applicants2 -> where('state','=',3)->count();
-        $report2 = (object)$report2;
-        return view('report.state')->with(compact('report1','report2'));
+        $report = [];
+        $applicants = Applicant::all();
+        $types = ['بدون نوع'=>null,'داوطلب'=>'1','سرپرست داوطلب'=>'2','همراه داوطلب'=>'3','عوامل دانشگاه'=>'4','عوامل سنجش'=>'5','اساتید و ناظرین'=>'6'];
+        $map = ['women'=>'1','men'=>'2','other'=>'3'];
+        foreach ($types as $name=>$type) {
+            $layer = $applicants->where('type', '=', $type);
+            $report[$type] = array();
+            foreach ($map as $key => $value) {
+                $report[$type][$key]['nashode'] = $layer->where('gender', '=', $value)->where('state', '=', null)->count();
+                $report[$type][$key]['kamel'] = $layer->where('gender', '=', $value)->where('state', '=', 1)->count();
+                $report[$type][$key]['movaghat'] = $layer->where('gender', '=', $value)->where('state', '=', 2)->count();
+                $report[$type][$key]['namomken'] = $layer->where('gender', '=', $value)->where('state', '=', 3)->count();
+            };
+        }
+
+        return view('report.state')->with(compact('report','types','map'));
     }
     public function major()
     {
