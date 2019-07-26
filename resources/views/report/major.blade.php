@@ -26,6 +26,7 @@
                             </tr>
                             </thead>
                             <tbody>
+
                             @foreach($majors as $major)
                                 <tr class="text-center">
                                     <td scope="col">{{ $major->name }}</td>

@@ -100,7 +100,7 @@ class ReportController extends Controller
         $majors = Major::all();
         $map = ['women'=>'1','men'=>'2','other'=>'3'];
         foreach ($majors as $major) {
-            $layer = $applicants->where('university', '=', $major->id);
+            $layer = $applicants->where('major', '=', $major->id);
             $report[$major->id] = array();
             foreach ($map as $key => $value) {
                 $report[$major->id][$key]['nashode'] = $layer->where('gender', '=', $value)->where('state', '=', null)->count();
