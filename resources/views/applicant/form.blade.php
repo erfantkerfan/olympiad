@@ -103,7 +103,7 @@
                                 <label for="type" class="col-md-4 col-form-label text-md-right">نوع متقاضی</label>
 
                                 <div class="col-md-7">
-                                    <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" autofocus>
+                                    <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" autofocus required>
                                         <option value="">انتخاب کنید</option>
 
                                         <option value="1">داوطلب</option>

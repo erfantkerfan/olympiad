@@ -79,7 +79,7 @@ class ReportController extends Controller
     {
         $report = [];
         $applicants = Applicant::all();
-        $types = ['بدون نوع'=>null,'داوطلب'=>'1','سرپرست داوطلب'=>'2','همراه داوطلب'=>'3','عوامل دانشگاه'=>'4','عوامل سنجش'=>'5','اساتید و ناظرین'=>'6'];
+        $types = ['داوطلب'=>'1','سرپرست داوطلب'=>'2','همراه داوطلب'=>'3','عوامل دانشگاه'=>'4','عوامل سنجش'=>'5','اساتید و ناظرین'=>'6'];
         $map = ['women'=>'1','men'=>'2','other'=>'3'];
         foreach ($types as $name=>$type) {
             $layer = $applicants->where('type', '=', $type);
