@@ -99,6 +99,13 @@ class ReportController extends Controller
         $applicants = Applicant::where('type','=',1)->orwhere('type','=',null)->get();
         $majors = Major::all();
         $map = ['women'=>'1','men'=>'2','other'=>'3'];
+        $sum = [];
+        foreach ($map as $key => $value) {
+            $sum[$key]['nashode'] = $applicants->where('gender', '=', $value)->where('state', '=', null)->where('type', '=', 1)->count();
+            $sum[$key]['kamel'] = $applicants->where('gender', '=', $value)->where('state', '=', 1)->where('type', '=', 1)->count();
+            $sum[$key]['movaghat'] = $applicants->where('gender', '=', $value)->where('state', '=', 2)->where('type', '=', 1)->count();
+            $sum[$key]['namomken'] = $applicants->where('gender', '=', $value)->where('state', '=', 3)->where('type', '=', 1)->count();
+        };
         foreach ($majors as $major) {
             $layer = $applicants->where('major', '=', $major->id);
             $report[$major->id] = array();
@@ -109,7 +116,7 @@ class ReportController extends Controller
                 $report[$major->id][$key]['namomken'] = $layer->where('gender', '=', $value)->where('state', '=', 3)->count();
             };
         }
-        return view('report.major')->with(compact('report','map','majors'));
+        return view('report.major')->with(compact('report','map','majors','sum'));
     }
     public function university()
     {

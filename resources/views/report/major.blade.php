@@ -26,7 +26,15 @@
                             </tr>
                             </thead>
                             <tbody>
-
+                            <tr class="text-center">
+                                <td scope="col">مجموع(صرفا داوطلبین)</td>
+                                @foreach($map as $key=>$value)
+                                    <td scope="col" @if(!$loop->first) style="border-right: 2px solid black;" @endif>{{ $sum[$key]['nashode'] }}</td>
+                                    <td scope="col">{{ $sum[$key]['kamel'] }}</td>
+                                    <td scope="col">{{ $sum[$key]['movaghat'] }}</td>
+                                    <td scope="col">{{ $sum[$key]['namomken'] }}</td>
+                                @endforeach
+                            </tr>
                             @foreach($majors as $major)
                                 <tr class="text-center">
                                     <td scope="col">{{ $major->name }}</td>
