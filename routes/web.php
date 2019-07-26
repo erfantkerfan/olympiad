@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pdf/{id}', 'ExtraController@pdf')->name('pdf');
     Route::prefix('report')->group(function () {
         Route::get('/cafe', 'ReportController@cafe')->name('cafe');
-        Route::get('/type', 'ReportController@type')->name('state_report');
+        Route::get('/type', 'ReportController@type')->name('type_report');
         Route::get('/major', 'ReportController@major')->name('major_report');
         Route::get('/university', 'ReportController@university')->name('university_report');
     });
