@@ -58,7 +58,7 @@
                                 <label for="fa_name" class="col-md-4 col-form-label text-md-right">نام پدر</label>
 
                                 <div class="col-md-7">
-                                    <input id="fa_name" type="text" class="form-control{{ $errors->has('fa_name') ? ' is-invalid' : '' }}" name="fa_name" value="{{ $applicant->fa_name }}" autofocus>
+                                    <input id="fa_name" type="text" class="form-control{{ $errors->has('fa_name') ? ' is-invalid' : '' }}" name="fa_name" value="{{ $applicant->fa_name }}" autofocus required>
 
                                     @if ($errors->has('fa_name'))
                                         <span class="invalid-feedback" role="alert">
@@ -88,19 +88,19 @@
                                 <div class="col-md-7 text-right">
 
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="2" @if($applicant->gender==2) checked @endif>
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="2" @if($applicant->gender==2) checked @endif required>
                                         <label class="form-check-label" for="gender">
                                             مرد
                                         </label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="1" @if($applicant->gender==1) checked @endif>
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="1" @if($applicant->gender==1) checked @endif required>
                                         <label class="form-check-label" for="gender">
                                             زن
                                         </label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="3" @if($applicant->gender==3) checked @endif>
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="3" @if($applicant->gender==3) checked @endif required>
                                         <label class="form-check-label" for="gender">
                                             سایر
                                         </label>
@@ -167,7 +167,7 @@
                                 <label for="university" class="col-md-4 col-form-label text-md-right">دانشگاه</label>
 
                                 <div class="col-md-7">
-                                    <select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" autofocus>
+                                    <select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" autofocus required>
                                         <option value="">انتخاب کنید</option>
                                         @foreach($universities as $university)
                                             <option value="{{$university->id}}" @if($applicant->university==$university->id) selected @endif>{{$university->name}}</option>
@@ -186,7 +186,7 @@
                                 <label for="major" class="col-md-4 col-form-label text-md-right">رشته المپیاد</label>
 
                                 <div class="col-md-7">
-                                    <select id="major" class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}" name="major" autofocus>
+                                    <select id="major" class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}" name="major" autofocus required>
                                         <option value="">انتخاب کنید</option>
                                         @foreach($majors as $major)
                                             <option value="{{$major->id}}" @if($applicant->major==$major->id) selected @endif>{{$major->name}}</option>
