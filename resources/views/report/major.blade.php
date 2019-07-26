@@ -11,14 +11,14 @@
                             <thead>
                             <tr class="text-center">
                                 <th scope="col">رشته</th>
-                                <th scope="col">پذیرش نشده مرد</th>
-                                <th scope="col">پذیرش کامل مرد</th>
-                                <th scope="col">پذیرش موقت مرد</th>
-                                <th scope="col">عدم پذیرش مرد</th>
                                 <th scope="col">پذیرش نشده زن</th>
                                 <th scope="col">پذیرش کامل زن</th>
                                 <th scope="col">پذیرش موقت زن</th>
                                 <th scope="col">عدم پذیرش زن</th>
+                                <th scope="col">پذیرش نشده مرد</th>
+                                <th scope="col">پذیرش کامل مرد</th>
+                                <th scope="col">پذیرش موقت مرد</th>
+                                <th scope="col">عدم پذیرش مرد</th>
                                 <th scope="col">پذیرش نشده سایر</th>
                                 <th scope="col">پذیرش کامل سایر</th>
                                 <th scope="col">پذیرش موقت سایر</th>
