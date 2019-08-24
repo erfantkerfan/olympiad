@@ -22,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('password', 'Auth\PasswordController@showPasswordForm')->name('password');
     Route::post('password', 'Auth\PasswordController@Password');
 
+    Route::post('/applicant/search', 'ApplicantController@search')->name('applicant_search');
     Route::get('/applicant/create', 'ApplicantController@form')->name('applicant_create');
     Route::post('/applicant/create', 'ApplicantController@create');
     Route::get('/applicant/list', 'ApplicantController@list')->name('applicant_list');

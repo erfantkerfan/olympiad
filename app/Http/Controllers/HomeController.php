@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Applicant;
 
 class HomeController extends Controller
 {
@@ -23,7 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $applicants = Applicant::all();
+        return view('home')->with(compact('applicants'));
     }
 
     public function welcome()

@@ -15,7 +15,9 @@
                                 <label for="name" class="col-md-4 col-form-label text-md-right">نام</label>
 
                                 <div class="col-md-7">
-                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                    <input id="name" type="text"
+                                           class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                           name="name" value="{{ old('name') }}" required autofocus>
 
                                     @if ($errors->has('name'))
                                         <span class="invalid-feedback" role="alert">
@@ -29,7 +31,9 @@
                                 <label for="f_name" class="col-md-4 col-form-label text-md-right">نام خانوادگی</label>
 
                                 <div class="col-md-7">
-                                    <input id="f_name" type="text" class="form-control{{ $errors->has('f_name') ? ' is-invalid' : '' }}" name="f_name" value="{{ old('f_name') }}" required autofocus>
+                                    <input id="f_name" type="text"
+                                           class="form-control{{ $errors->has('f_name') ? ' is-invalid' : '' }}"
+                                           name="f_name" value="{{ old('f_name') }}" required autofocus>
 
                                     @if ($errors->has('f_name'))
                                         <span class="invalid-feedback" role="alert">
@@ -43,7 +47,9 @@
                                 <label for="fa_name" class="col-md-4 col-form-label text-md-right">نام پدر</label>
 
                                 <div class="col-md-7">
-                                    <input id="fa_name" type="text" class="form-control{{ $errors->has('fa_name') ? ' is-invalid' : '' }}" name="fa_name" value="{{ old('fa_name') }}" autofocus required>
+                                    <input id="fa_name" type="text"
+                                           class="form-control{{ $errors->has('fa_name') ? ' is-invalid' : '' }}"
+                                           name="fa_name" value="{{ old('fa_name') }}" autofocus required>
 
                                     @if ($errors->has('fa_name'))
                                         <span class="invalid-feedback" role="alert">
@@ -57,7 +63,9 @@
                                 <label for="SSN" class="col-md-4 col-form-label text-md-right">شماره ملی</label>
 
                                 <div class="col-md-7">
-                                    <input id="SSN" type="text" class="form-control{{ $errors->has('SSN') ? ' is-invalid' : '' }}" name="SSN" value="{{ old('SSN') }}" required autofocus>
+                                    <input id="SSN" type="text"
+                                           class="form-control{{ $errors->has('SSN') ? ' is-invalid' : '' }}" name="SSN"
+                                           value="{{ old('SSN') }}" required autofocus>
 
                                     @if ($errors->has('SSN'))
                                         <span class="invalid-feedback" role="alert">
@@ -73,19 +81,22 @@
                                 <div class="col-md-7 text-right">
 
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="2" required>
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="2"
+                                               required>
                                         <label class="form-check-label" for="gender">
                                             مرد
                                         </label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="1" required>
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="1"
+                                               required>
                                         <label class="form-check-label" for="gender">
                                             زن
                                         </label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="3" required>
+                                        <input class="form-check-input" type="radio" name="gender" id="gender" value="3"
+                                               required>
                                         <label class="form-check-label" for="gender">
                                             سایر
                                         </label>
@@ -103,7 +114,9 @@
                                 <label for="type" class="col-md-4 col-form-label text-md-right">نوع متقاضی</label>
 
                                 <div class="col-md-7">
-                                    <select id="type" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type" autofocus required>
+                                    <select id="type"
+                                            class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}"
+                                            name="type" autofocus required>
                                         <option value="">انتخاب کنید</option>
 
                                         <option value="1">داوطلب</option>
@@ -123,18 +136,21 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="district" class="col-md-4 col-form-label text-md-right">متمرکز/غیرمتمرکز</label>
+                                <label for="district"
+                                       class="col-md-4 col-form-label text-md-right">متمرکز/غیرمتمرکز</label>
 
                                 <div class="col-md-7 text-right">
 
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="district" id="district" value="1">
+                                        <input class="form-check-input" type="radio" name="district" id="district"
+                                               value="1">
                                         <label class="form-check-label" for="district">
                                             ارشد-سراسري
                                         </label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input class="form-check-input" type="radio" name="district" id="district" value="2">
+                                        <input class="form-check-input" type="radio" name="district" id="district"
+                                               value="2">
                                         <label class="form-check-label" for="district">
                                             غيرمتمركز
                                         </label>
@@ -152,12 +168,21 @@
                                 <label for="university" class="col-md-4 col-form-label text-md-right">دانشگاه</label>
 
                                 <div class="col-md-7">
-                                    <select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" autofocus required>
-                                        <option value="">اتخاب کنید</option>
+                                    {{--<select id="university" class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}" name="university" autofocus required>--}}
+                                    {{--<option value="">اتخاب کنید</option>--}}
+                                    {{--@foreach($universities as $university)--}}
+                                    {{--<option value="{{$university->id}}">{{$university->name}}</option>--}}
+                                    {{--@endforeach--}}
+                                    {{--</select>--}}
+
+                                    <input list="universitylist" id="university"
+                                           class="form-control{{ $errors->has('university') ? ' is-invalid' : '' }}"
+                                           name="university" autofocus required autocomplete="off">
+                                    <datalist id="universitylist">
                                         @foreach($universities as $university)
                                             <option value="{{$university->id}}">{{$university->name}}</option>
                                         @endforeach
-                                    </select>
+                                    </datalist>
 
                                     @if ($errors->has('university'))
                                         <span class="invalid-feedback" role="alert">
@@ -171,12 +196,22 @@
                                 <label for="major" class="col-md-4 col-form-label text-md-right">رشته المپیاد</label>
 
                                 <div class="col-md-7">
-                                    <select id="major" class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}" name="major" autofocus required>
-                                        <option value="">اتخاب کنید</option>
+                                    {{--<select id="major"--}}
+                                    {{--class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}"--}}
+                                    {{--name="major" autofocus required>--}}
+                                    {{--<option value="">اتخاب کنید</option>--}}
+                                    {{--@foreach($majors as $major)--}}
+                                    {{--<option value="{{$major->id}}">{{$major->name}}</option>--}}
+                                    {{--@endforeach--}}
+                                    {{--</select>--}}
+                                    <input id="major" list="majorlist"
+                                           class="form-control{{ $errors->has('major') ? ' is-invalid' : '' }}"
+                                           name="major" autofocus required autocomplete="off">
+                                    <datalist id="majorlist">
                                         @foreach($majors as $major)
                                             <option value="{{$major->id}}">{{$major->name}}</option>
                                         @endforeach
-                                    </select>
+                                    </datalist>
 
                                     @if ($errors->has('major'))
                                         <span class="invalid-feedback" role="alert">
@@ -187,13 +222,7 @@
                             </div>
 
 
-                            <div class="form-group row mb-0">
-                                <div class="col-md-8">
-                                    <button type="submit" class="btn btn-primary">
-                                        ایجاد
-                                    </button>
-                                </div>
-                            </div>
+                            -
                         </form>
                     </div>
                 </div>
