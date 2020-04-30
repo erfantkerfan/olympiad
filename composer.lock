@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0f0b61d3e6de29235359bb9cbc38d7d",
+    "content-hash": "29c67ac6dcb9d3eec6e40ac5742e1065",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -522,6 +522,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -568,6 +569,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -3479,6 +3481,59 @@
                 "test"
             ],
             "time": "2016-01-20T08:20:44+00:00"
+        },
+        {
+            "name": "imanghafoori/laravel-microscope",
+            "version": "v1.0.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imanghafoori1/laravel-microscope.git",
+                "reference": "64547d9c80b3e273e14ec4803b20cdf8edb45969"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imanghafoori1/laravel-microscope/zipball/64547d9c80b3e273e14ec4803b20cdf8edb45969",
+                "reference": "64547d9c80b3e273e14ec4803b20cdf8edb45969",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.*|6.*|7.*"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Imanghafoori\\LaravelMicroscope\\LaravelMicroscopeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Imanghafoori\\LaravelMicroscope\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iman",
+                    "email": "imanghafoori1@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Auto test your laravel application",
+            "homepage": "https://github.com/imanghafoori1/laravel-microscope",
+            "keywords": [
+                "laravel-microscope",
+                "laravel-testing"
+            ],
+            "time": "2020-04-30T04:41:41+00:00"
         },
         {
             "name": "mockery/mockery",

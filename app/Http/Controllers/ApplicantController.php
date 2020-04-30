@@ -98,11 +98,12 @@ class ApplicantController extends Controller
 
 
         foreach ($dorm_array as $key => $value) {
-            if ($request->$value == 1 and $request->dorm == null) {
-                $alert = "نوع خوابگاه مشخص نشده";
-                Session::flash('alert', (string)$alert);
-                return redirect()->back();
+            if (!($request->$value == 1 and $request->dorm == null)) {
+                continue;
             }
+            $alert = "نوع خوابگاه مشخص نشده";
+            Session::flash('alert', (string)$alert);
+            return redirect()->back();
         }
         if ($request->dorm != null) {
             $dorm_count = Applicant::where('dorm', '=', $request->dorm)->count();
